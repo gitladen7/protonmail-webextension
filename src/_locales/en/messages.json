@@ -1,0 +1,208 @@
+{
+    "extension_name": {
+        "message": "ProtonMail (unofficial)",
+        "description": "Name of the extension."
+    },
+    "extension_description": {
+        "message": "Unofficial ProtonMail extension. Provides notifications and makes it possible to close ProtonMail without getting logged out.",
+        "description": "Description of the extension. Max 132 characters."
+    },
+    "button_goBack": {
+        "message": "Go back"
+    },
+    "tooltip_peek": {
+        "message": "Peek"
+    },
+    "warning_incognito": {
+        "message": "You have opened ProtonMail in a private browsing tab. The extension won't detect that session."
+    },
+    "warning_container": {
+        "message": "You have opened ProtonMail in a containered tab. The extension won't detect that session."
+    },
+    "accounts_title": {
+        "message": "ProtonMail account list"
+    },
+    "accounts_noAccounts": {
+        "message": "Login to ProtonMail and focus on the ProtonMail tab to add your account."
+    },
+    "accounts_hidden_checkbox": {
+        "message": "Display hidden"
+    },
+    "settings_title": {
+        "message": "Settings"
+    },
+    "settings_language_label": {
+        "message": "Language"
+    },
+    "settings_fetchinterval_label": {
+        "message": "Email check interval"
+    },
+    "settings_fetchinterval_option_singular": {
+        "message": "Check for email every minute"
+    },
+    "settings_fetchinterval_option": {
+        "message": "Check for email every $1 minutes"
+    },
+    "settings_notifications_label": {
+        "message": "Notification settings"
+    },
+    "settings_notifications_button": {
+        "message": "Expand notifications settings"
+    },
+    "settings_notifications_placeholder": {
+        "message": "Leave empty for default"
+    },
+    "settings_notifications_single_title": {
+        "message": "Single email notification title"
+    },
+    "settings_notifications_single_message": {
+        "message": "Single email notification message"
+    },
+    "settings_notifications_multiple_title": {
+        "message": "Multiple email notification title"
+    },
+    "settings_notifications_multiple_message": {
+        "message": "Multiple email notification message"
+    },
+    "settings_darkTheme_preLabel": {
+        "message": "Dark Theme"
+    },
+    "settings_darkTheme_label": {
+        "message": "Use dark theme"
+    },
+    "settings_icon_preLabel": {
+        "message": "Icon"
+    },
+    "settings_icon_label": {
+        "message": "Use light icon"
+    },
+    "settings_domain_label": {
+        "message": "Preferred ProtonMail domain"
+    },
+    "tooltip_autofill": {
+        "message": "Autofill username in ProtonMail"
+    },
+    "tooltip_open": {
+        "message": "Open in ProtonMail"
+    },
+    "badge_expired": {
+        "message": "Session expired"
+    },
+    "button_pmOpen": {
+        "message": "Open ProtonMail"
+    },
+    "accountSettings_title": {
+        "message": "Settings for $1"
+    },
+    "accountSettings_persistWarning": {
+        "message": "WARNING: Activating this setting will permanently write your $1 mailbox password to your hard drive. Do NOT use it on shared computers.\n Do you still want to continue?"
+    },
+    "accountSettings_acceptWarning": {
+        "message": "Enable Anyway"
+    },
+    "accountSettings_persist_label": {
+        "message": "Persist session"
+    },
+    "accountSettings_persistToDisk_label": {
+        "message": "Persist even if browser closes"
+    },
+    "accountSettings_badge_label": {
+        "message": "Show unread count badge"
+    },
+    "accountSettings_notifications_label": {
+        "message": "Show notifications on new emails"
+    },
+    "accountSettings_peeking_label": {
+        "message": "Enable Peeking"
+    },
+    "accountSettings_hide_label": {
+        "message": "Hide"
+    },
+    "accountSettings_expired_title": {
+        "message": "Session expired"
+    },
+    "accountSettings_expired_body": {
+        "message": "Your session expired."
+    },
+    "accountSettings_button_clear": {
+        "message": "Clear sessions"
+    },
+    "accountSettings_button_delete": {
+        "message": "Delete"
+    },
+    "peeking_receivedFrom": {
+        "message": "Received from"
+    },
+    "peeking_markAsRead": {
+        "message": "Mark as read"
+    },
+    "peeking_open": {
+        "message": "Read in ProtonMail"
+    },
+    "peeking_refresh": {
+        "message": "Refresh"
+    },
+    "peeking_markAllAsRead": {
+        "message": "Mark all as read"
+    },
+    "peeking_loading": {
+        "message": "Loading..."
+    },
+    "peeking_error": {
+        "message": "Error: "
+    },
+    "peeking_noMessages": {
+        "message": "There are no unread messages."
+    },
+    "peeking_moreMessages_button": {
+        "message": "$1 more messages..."
+    },
+    "notification_single_title": {
+        "message": "New email received from %senderAddress%"
+    },
+    "notification_single_message": {
+        "message": "%subject%"
+    },
+    "notification_multiple_title": {
+        "message": "%count% new emails received to %email%"
+    },
+    "notification_multiple_message": {
+        "message": "%count% new emails received to %email%"
+    },
+    "ago_now": {
+        "message": "just now"
+    },
+    "ago_minute": {
+        "message": "one minute ago"
+    },
+    "ago_minutes": {
+        "message": "$1 minutes ago"
+    },
+    "ago_hour": {
+        "message": "one hour ago"
+    },
+    "ago_hours": {
+        "message": "$1 hours ago"
+    },
+    "ago_day": {
+        "message": "yesterday"
+    },
+    "ago_days": {
+        "message": "$1 days ago"
+    },
+    "ago_month": {
+        "message": "one month ago"
+    },
+    "ago_months": {
+        "message": "$1 months ago"
+    },
+    "ago_year": {
+        "message": "one year ago"
+    },
+    "ago_years": {
+        "message": "$1 years ago"
+    },
+    "notification_markAsRead": {
+        "message": "Mark as read"
+    }
+}

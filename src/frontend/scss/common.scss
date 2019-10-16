@@ -1,0 +1,190 @@
+@import "../../../node_modules/bulma/bulma.sass";
+@import "../../../node_modules/bulma-switch/src/sass/index.sass";
+@import "../../../node_modules/bulma-badge/src/sass/index.sass";
+@import "../../../node_modules/bulma-tooltip/src/sass/index.sass";
+
+.svg-inline--fa.fa-w-16 {
+  width: 1em;
+}
+
+.svg-inline--fa {
+  display: inline-block !important;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em !important;
+}
+
+.fa-spin {
+    animation: fa-spin 2s linear infinite;
+}
+
+@keyframes fa-spin{
+  0% { transform:rotate(0deg) }
+  100% { transform:rotate(359deg) }
+}
+
+#root {
+  width: 400px;
+}
+
+.overflow-container {
+  overflow: auto;
+}
+
+.page {
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  background: $header-color;
+  color:white;
+  padding: 15px;
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.popup-header .buttons {
+  flex-wrap: initial !important;
+}
+
+.popup-header-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 36px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  line-height: 36px;
+}
+
+.popup-footer-right {
+  margin-left: auto;
+}
+
+.popup-footer .buttons {
+  flex-wrap: initial !important;
+  margin-bottom: 0;
+}
+
+.popup-footer.colored {
+  background: $background-dark;
+}
+
+.accounts-list .email-info {
+  flex-grow: 1;
+  line-height: 44px;
+}
+
+.accounts-list-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: $background-dark;
+}
+
+.accounts-list li:nth-child(even), .peek-list li:nth-child(even) {
+  background: $background-light;
+}
+
+.accounts-list-list .email-info {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.accounts-list-list .buttons {
+  flex-wrap: initial !important;
+}
+
+.peek-list li {
+  display: flex;
+  padding: 1rem;
+  background: $background-dark;
+}
+
+.peek-list .media {
+  width: 100%;
+}
+
+.peek-list .media-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.peek-subject {
+  flex-grow: 1;
+  display: flex;
+}
+
+.peek-list-list .buttons {
+  flex-direction: column;
+}
+
+.peek-list-list .button {
+  margin-right: 0 !important;
+}
+
+.account-settings-body, .settings-body {
+  padding: 20px;
+}
+
+.accounts-list-body, .peek-list-body {
+  padding: 15px;
+}
+
+.accounts-list-body, .peek-list-body {
+  background: $background-dark;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+html {
+  overflow: auto !important;
+  cursor: default;
+}
+
+.accounts-list .message {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.accounts-list .message-body {
+  border-radius: 0;
+  position: relative;
+}
+
+.accounts-list .delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.25rem;
+}
+
+.email-info .tag {
+  margin-right: 4px;
+}
+
+.more .button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-body{
+  overflow-wrap: break-word;
+}

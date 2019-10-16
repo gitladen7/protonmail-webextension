@@ -1,0 +1,69 @@
+{
+  "name": "protonmail-webextension",
+  "private": true,
+  "version": "1.4.0",
+  "dependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jszip": "^3.1.6",
+    "@types/node": "12.7.12",
+    "@types/react": "16.9.5",
+    "@types/react-dom": "16.9.1",
+    "@types/react-redux": "^7.1.4",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "bulma": "^0.7.5",
+    "bulma-badge": "^3.0.1",
+    "bulma-switch": "^2.0.0",
+    "bulma-tooltip": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^6.0.3",
+    "eslint-plugin-react": "^7.16.0",
+    "glob": "^7.1.4",
+    "jszip": "^3.2.2",
+    "node-sass": "^4.12.0",
+    "proton-api": "^1.0.5",
+    "purgecss": "^1.4.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "react-scripts": "3.2.0",
+    "redux": "^4.0.4",
+    "rimraf": "^3.0.0",
+    "ts-loader": "^6.2.0",
+    "typesafe-actions": "^4.4.2",
+    "typescript": "3.6.4",
+    "web-ext-types": "^3.2.1",
+    "webextension-polyfill": "^0.5.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start:background": "webpack --env.NODE_ENV=development --mode=development",
+    "clean": "rimraf *.zip build .env",
+    "purgecss": "purgecss --css build/static/css/*.css --out build/static/css/ --content public/index.html src/**/**/*.tsx src/**/*.tsx",
+    "build:production:react": "cross-env GENERATE_SOURCEMAP=false INLINE_RUNTIME_CHUNK=false react-scripts build",
+    "build:production:background": "webpack --mode=production",
+    "build:production": "cross-env node scripts/setEnv.js && npm run build:production:react && npm run build:production:background && npm run purgecss",
+    "build:firefox": "cross-env npm run build:production && node scripts/manifest.js firefox",
+    "build:chromium": "cross-env npm run build:production && node scripts/manifest.js chromium",
+    "build": "npm run build:firefox",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "node scripts/deploy.js",
+    "lint": "eslint --ext .js,.ts,.tsx ."
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {}
+}

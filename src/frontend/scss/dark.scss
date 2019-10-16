@@ -1,0 +1,106 @@
+
+$primary: #737aee;
+$grey-lighter: #dbdee0;
+$grey-light:   #8c9b9d;
+$grey:         darken($grey-light, 18);
+$grey-dark:    darken($grey, 18);
+$grey-darker:  darken($grey, 23);
+
+$header-color: #252525;
+$background-dark: #323234;
+$background-light: #3f3f41;
+$text: #fff;
+$text-light: lighten($text, 10);
+$text-strong: darken($text, 5);
+$body-background-color: $background-dark;
+
+$background: $grey-darker;
+$footer-background-color: $background;
+$button-background-color: $background;
+$button-border-color: lighten($button-background-color, 15);
+
+$button-color: $text;
+$button-hover-color: darken($text, 5);
+$button-focus: darken($text, 5);
+$button-active-color: darken($text, 5);
+$button-disabled-background-color: $grey-light;
+
+.darkTheme {
+    background: $grey-darker;
+
+    body {
+        color: #dbdee0;
+    }
+    .popup-header {
+        background-color: #252525;
+    }
+
+    .accounts-list-list li, .popup-footer.colored, .peek-list li, .accounts-list-body, .peek-list-body {
+        background: $background-dark;
+    }
+
+    .accounts-list li:nth-child(even), .peek-list li:nth-child(even) {
+        background: $background-light;
+    }
+
+    .label {
+        color: $grey-lighter;
+    }
+
+    .message.is-warning {
+        background-color: #9f8004;
+        color: #dbdee0;
+    }
+
+    .message.is-warning .message-body {
+        color: #dbdee0;
+    }
+
+    .message.is-danger {
+        background-color: #572f2f;
+    }
+
+    .message.is-danger .message-header {
+        background-color: #710017;
+    }
+
+    .message.is-danger .message-body {
+        color: #dbdee0;
+    }
+
+    .button.is-danger {
+        background-color: #710017;
+    }
+
+    .button.is-danger:hover {
+        background-color: #86001b;
+    }
+
+    .button.is-primary {
+        background-color: #737aee;
+    }
+
+    .button.is-primary:hover {
+        background-color: #8489ee;
+    }
+
+    .button {
+        background-color: #5f5f5f;
+        border-color: #3f3d3d;
+        color: #dbdee0;
+    }
+
+    .button:hover {
+        background-color: #7a7a7a;
+        color: #dbdee0;
+    }
+
+    .tag:not(body).is-danger {
+        background-color: #e21840;
+    }
+
+    [data-badge].has-badge-danger::after {
+        background: #e21840;
+        color: #fff;
+    }
+}

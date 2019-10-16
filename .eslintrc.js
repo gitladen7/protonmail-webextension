@@ -1,0 +1,31 @@
+module.exports = {
+    parser: "@typescript-eslint/parser",
+    extends: ["eslint:recommended", "react-app"],
+    plugins: ["@typescript-eslint", "react"],
+    parserOptions: {
+        ecmaVersion: 6,
+        sourceType: "module",
+    },
+    env: {
+        browser: true,
+        es6: true,
+        jest: true,
+        node: true,
+        webextensions: true,
+    },
+    rules: {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-indent": "error",
+        "quotes": ["error", "double", "avoid-escape"],
+        "eqeqeq": ["error", "always"],
+        "semi": ["error", "always"],
+        "eol-last": ["error", "always"],
+        "indent": ["error", 4, { SwitchCase: 1 }],
+        "no-var": ["error"],
+        "prefer-const": ["error"],
+        "comma-dangle": ["error", "always-multiline"],
+        "max-len": ["error", 140],
+    },
+}

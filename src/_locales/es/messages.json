@@ -1,0 +1,16 @@
+{
+    "extension_name": {
+        "message": "ProtonMail (unofficial)",
+        "description": "Name of the extension."
+    },
+    "extension_description": {
+        "message": "Unofficial ProtonMail extension. Provides notifications and makes it possible to close ProtonMail without getting logged out.",
+        "description": "Description of the extension. Max 132 characters."
+    },
+    "settings_title": {
+        "message": "Configuración"
+    },
+    "settings_language_label": {
+        "message": "Idioma"
+    }
+}
