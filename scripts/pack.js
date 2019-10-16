@@ -20,7 +20,7 @@ const files = what === "extension" ?
             "./.git/**",
             "./build/**",
             "./TODO.md",
-            "./misc",
+            "./misc/**",
             "./*.zip"],
     });
 
