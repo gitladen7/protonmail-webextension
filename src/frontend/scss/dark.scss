@@ -9,21 +9,6 @@ $grey-darker:  darken($grey, 23);
 $header-color: #252525;
 $background-dark: #323234;
 $background-light: #3f3f41;
-$text: #fff;
-$text-light: lighten($text, 10);
-$text-strong: darken($text, 5);
-$body-background-color: $background-dark;
-
-$background: $grey-darker;
-$footer-background-color: $background;
-$button-background-color: $background;
-$button-border-color: lighten($button-background-color, 15);
-
-$button-color: $text;
-$button-hover-color: darken($text, 5);
-$button-focus: darken($text, 5);
-$button-active-color: darken($text, 5);
-$button-disabled-background-color: $grey-light;
 
 .darkTheme {
     background: $grey-darker;
