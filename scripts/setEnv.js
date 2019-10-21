@@ -18,4 +18,9 @@ envList.push({
     content: "<script type=\"application/javascript\" src=\"browser-polyfill.js\"></script>",
 });
 
+envList.push({
+    name: "VERSION",
+    content: JSON.parse(fs.readFileSync("./package.json").toString()).version,
+});
+
 fs.writeFileSync("./.env", envList.map((s) => `REACT_APP_${s.name.toUpperCase()}=${s.content}`).join("\n"));

@@ -79,6 +79,9 @@
     "settings_domain_label": {
         "message": "Preferred ProtonMail domain"
     },
+    "settings_version_label": {
+        "message": "Version"
+    },
     "tooltip_autofill": {
         "message": "Autofill username in ProtonMail"
     },

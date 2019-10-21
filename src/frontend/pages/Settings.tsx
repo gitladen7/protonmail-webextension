@@ -146,9 +146,7 @@ const Settings: React.FC<SettingsProps> = (props) => {
                         useLightIcon: newValue,
                     })}
                 />
-                <div className="field" style={{
-                    marginBottom: "0.75rem",
-                }}>
+                <div className="field">
                     <label className="label">{_("settings_domain_label")}</label>
                     <div className="control">
                         <div className="select">
@@ -160,6 +158,14 @@ const Settings: React.FC<SettingsProps> = (props) => {
                                 }
                             </select>
                         </div>
+                    </div>
+                </div>
+                <div className="field" style={{
+                    marginBottom: "0.75rem",
+                }}>
+                    <label className="label">{_("settings_version_label")}</label>
+                    <div className="control">
+                        {process.env.REACT_APP_VERSION || "version"}
                     </div>
                 </div>
             </div>
