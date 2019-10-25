@@ -12,9 +12,7 @@
         const r = {
             windowName: windowName,
             sessionStorage: sessionStorageObj,
-            email: document.querySelector(".navigationUser-head-email") !== null ?
-                document.querySelector(".navigationUser-head-email").innerText :
-                document.querySelector(".navigationUser-button span .smaller").innerText,
+            email: document.title.replace(/[^|]*\| ?/, "").replace(/ ?\|.*$/, ""),
         };
         return r;
     } catch (err) {
