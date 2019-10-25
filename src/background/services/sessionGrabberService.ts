@@ -94,7 +94,7 @@ export class SessionGrabberService {
 
         const sharedSessionObject = result[0] as ISharedSessionObject;
         if (typeof sharedSessionObject.email !== "string" ||
-            sharedSessionObject.email === "" ||
+            sharedSessionObject.email.indexOf("@") === -1 ||
             sharedSessionObject.windowName === "" ||
             sharedSessionObject.windowName === "{}") {
             return undefined;
