@@ -12,7 +12,9 @@
         const r = {
             windowName: windowName,
             sessionStorage: sessionStorageObj,
-            email: document.querySelector(".navigationUser-head-email").innerText,
+            email: document.querySelector(".navigationUser-head-email") !== null ?
+                document.querySelector(".navigationUser-head-email").innerText :
+                document.querySelector(".navigationUser-button span .smaller").innerText,
         };
         return r;
     } catch (err) {
