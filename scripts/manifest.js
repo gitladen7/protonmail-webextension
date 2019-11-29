@@ -38,7 +38,7 @@ function generateManifest() {
         "name": "__MSG_extension_name__",
         "version": JSON.parse(fs.readFileSync("./package.json").toString()).version,
         "description": "__MSG_extension_description__",
-        "homepage_url": "https://github.com/gitladen7/protonmail-extension",
+        "homepage_url": "https://github.com/gitladen7/protonmail-webextension",
         "default_locale": "en",
         "icons": {
             "16": "icons/icon.svg",
