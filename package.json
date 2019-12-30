@@ -1,7 +1,7 @@
 {
   "name": "protonmail-webextension",
   "private": true,
-  "version": "1.7.0",
+  "version": "1.8.0",
   "dependencies": {
     "@types/glob": "^7.1.1",
     "@types/jszip": "^3.1.6",
