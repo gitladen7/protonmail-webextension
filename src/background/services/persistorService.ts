@@ -3,6 +3,7 @@ import { logger } from "../helpers/logger";
 import { backgroundStore } from "../backgroundStore";
 import { defaultPeekState } from "../../shared/store/peek/reducers";
 import { availableLanguages } from "../../shared/i18n";
+import { defaultSettings } from "../../shared/store/settings/reducers";
 
 export class PersistorService {
     public version = "1";
@@ -23,6 +24,11 @@ export class PersistorService {
             if (storedState.version !== this.version) {
                 logger.debug("state version missmatch, using default state"); // TODO: add migrations
                 return;
+            }
+
+            // set after 1.8.0
+            if (storedState.settings.mailtoHandlerToken === undefined) {
+                storedState.settings.mailtoHandlerToken = defaultSettings.mailtoHandlerToken;
             }
 
             backgroundStore.dispatch(rootAction.accounts.loadAccounts(storedState.accounts));

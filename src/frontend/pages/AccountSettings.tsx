@@ -10,6 +10,7 @@ interface AccountSettingsProps {
     editAccount: (obj: Partial<IProtonAccount>) => void;
     deleteAccount: () => void;
     onClose: () => void;
+    onRegisterAsProtocolHandlerClick: () => void;
 }
 
 const AccountSettings: React.FC<AccountSettingsProps> = (props) => {
@@ -84,6 +85,12 @@ const AccountSettings: React.FC<AccountSettingsProps> = (props) => {
                         hidden: newValue,
                     })}
                 />
+                <div className="field">
+                    <Button
+                        onClick={() => props.onRegisterAsProtocolHandlerClick()}
+                        label={_("accountSettings_set_as_handler")}
+                    />
+                </div>
                 {props.account.sessionExpired && <article className="field message is-danger">
                     <div className="message-header">
                         {_("accountSettings_expired_title")}

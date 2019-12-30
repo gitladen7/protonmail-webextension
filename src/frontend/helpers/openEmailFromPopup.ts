@@ -1,4 +1,4 @@
-export const openEmailFromPopup = async (email: string, path: string) => {
+export const openEmailFromPopup = async (email: string, path: string, registerAsProtocolHandler: boolean = false) => {
     if (typeof browser === "undefined") {
         return;
     }
@@ -8,6 +8,7 @@ export const openEmailFromPopup = async (email: string, path: string) => {
         payload: {
             email,
             path,
+            registerAsProtocolHandler,
         },
     });
     window.close();

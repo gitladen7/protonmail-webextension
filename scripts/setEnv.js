@@ -4,6 +4,8 @@ const scripts = [
     "save",
     "load",
     "autofill",
+    "compose",
+    "registerProtocolHandler"
 ];
 
 const envList = scripts.map((name) => {

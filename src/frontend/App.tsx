@@ -69,6 +69,7 @@ const App: React.FC<AppState & RootActionProps> = (props) => {
                 }); props.deleteAccount(editingAccount.email);
             }}
             editAccount={(obj) => props.editAccount(editingAccount.email, obj)}
+            onRegisterAsProtocolHandlerClick={() => openEmailFromPopup(editingAccount.email, "", true)}
         />;
     }
 

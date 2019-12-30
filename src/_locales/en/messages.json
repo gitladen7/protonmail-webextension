@@ -22,6 +22,18 @@
     "accounts_title": {
         "message": "ProtonMail account list"
     },
+    "accounts_tooltip_settings": {
+        "message": "Open settings"
+    },
+    "accounts_tooltip_help": {
+        "message": "Open help page"
+    },
+    "accounts_tooltip_sync": {
+        "message": "Fetch new email"
+    },
+    "accounts_tooltip_account_settings": {
+        "message": "Open account settings"
+    },
     "accounts_noAccounts": {
         "message": "Login to ProtonMail and focus on the ProtonMail tab to add your account."
     },
@@ -132,6 +144,9 @@
     },
     "accountSettings_button_delete": {
         "message": "Delete"
+    },
+    "accountSettings_set_as_handler": {
+        "message": "Register as mailto: protocol handler"
     },
     "peeking_receivedFrom": {
         "message": "Received from"

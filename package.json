@@ -17,6 +17,7 @@
     "bulma-tooltip": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "cross-env": "^6.0.3",
+    "crypto-random-string": "^3.0.1",
     "eslint-plugin-react": "^7.16.0",
     "glob": "^7.1.4",
     "jszip": "^3.2.2",

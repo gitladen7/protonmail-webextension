@@ -16,6 +16,7 @@ import { fetcherCronService } from "./services/fetcherCronService";
 
     await persistorService.loadState();
     await sessionGrabberService.init();
+
     browser.runtime.onMessage.addListener(async (obj: any) => {
         // eslint-disable-next-line no-async-promise-executor
         return new Promise<any>(async (resolve) => {
@@ -30,7 +31,8 @@ import { fetcherCronService } from "./services/fetcherCronService";
                 if (message.name === "LOG") {
                     logger.debug(message.payload);
                 } else if (message.name === "OPEN_EMAIL") {
-                    await openEmail(message.payload.email, message.payload.path !== "" ? message.payload.path : undefined);
+                    await openEmail(message.payload.email,
+                        message.payload.path !== "" ? message.payload.path : undefined, message.payload.registerAsProtocolHandler);
                 } else if (message.name === "OPEN_PROTONMAIL") {
                     await openProtonmail("");
                 } else if (message.name === "PROCESS_REDUX_ACTION") {

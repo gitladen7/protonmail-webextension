@@ -8,6 +8,7 @@ export interface ISettings {
     multipleNotificationMessage: string;
     useLightIcon: boolean;
     darkTheme: boolean;
+    mailtoHandlerToken: string;
 }
 
 export const SET_SETTINGS = "SET_SETTINGS";

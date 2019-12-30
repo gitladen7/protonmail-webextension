@@ -6,6 +6,8 @@ import { protonDomains } from "../../shared/protonDomains.js";
 import { backgroundStore } from "../backgroundStore";
 import { rootAction } from "../../shared/store";
 import { fetcherCronService } from "./fetcherCronService";
+import { openEmail } from "../helpers/openEmail";
+import { parseMailtoURL } from "../helpers/parseMailtoURL";
 
 export class SessionGrabberService {
     private lastReqTime = 0;
@@ -105,6 +107,32 @@ export class SessionGrabberService {
 
     async onProtonAPIRequest(e: any) {
         if (e.tabId === -1) {
+            return;
+        }
+
+        if ((e.url || "").indexOf("/api/mailtoHandler") !== -1) {
+            try {
+                try {
+                    const tab = await browser.tabs.get(e.tabId);
+                    await browser.tabs.update(tab.id, { url: tab.url });
+                } catch (error) {
+                    logger.error(error);
+                }
+
+                const parsed = parseMailtoURL(`${e.url}`);
+                if (parsed === undefined || parsed.data.to === "" || parsed.email === "") {
+                    return;
+                }
+
+                const account = selectAccount(parsed.email);
+                if (account === undefined) {
+                    return;
+                }
+
+                openEmail(parsed.email, "", false, parsed.data);
+            } catch (error) {
+                logger.error(error);
+            }
             return;
         }
 

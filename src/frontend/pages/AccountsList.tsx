@@ -48,6 +48,8 @@ const AccountsListRow: React.FC<AccountsListRowProps> = (props) => {
                 onClick={() => props.onSettingsClick(account.email)}
                 icon="cog"
                 badge={account.sessionExpired ? _("badge_expired") : undefined}
+                tooltip={_("accounts_tooltip_account_settings")}
+                tooltipPosition={"left"}
             />
         </div>
     </li>;
@@ -76,15 +78,26 @@ const AccountsList: React.FC<AccountsListProps> = (props) => {
                 <div className="buttons">
                     <Button
                         visible={accountsToDisplay.length !== 0}
+                        onClick={() => window.open("https://github.com/gitladen7/protonmail-webextension/wiki")}
+                        icon={"help"}
+                        tooltip={_("accounts_tooltip_help")}
+                        tooltipPosition={"left"}
+                    />
+                    <Button
+                        visible={accountsToDisplay.length !== 0}
                         disabled={props.ui.syncing}
                         onClick={() => syncFromPopup()}
                         icon={props.ui.syncing ? "hourglass" : "sync"}
+                        tooltip={_("accounts_tooltip_sync")}
+                        tooltipPosition={"left"}
                     />
                     <Button
                         onClick={() => props.setUI({
                             showingSettings: true,
                         })}
                         icon="cog"
+                        tooltip={_("accounts_tooltip_settings")}
+                        tooltipPosition={"left"}
                     />
                 </div>
             </div>

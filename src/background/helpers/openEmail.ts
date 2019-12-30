@@ -2,8 +2,42 @@ import { logger } from "./logger";
 import { openProtonmail } from "./openProtonmail";
 import { protonDomains } from "../../shared/protonDomains.js";
 import { selectAccount } from "./selectors";
+import { backgroundStore } from "../backgroundStore";
 
-export const openEmail = async (email: string, path: string = "/inbox") => {
+const doCompose = async (composeData: any, tabId: number) => {
+    try {
+        const response = await browser.tabs.executeScript(tabId, {
+            code: atob(`${process.env.REACT_APP_COMPOSE}`).replace(/"%obj%"/g, JSON.stringify(composeData)),
+            runAt: "document_start",
+        });
+
+        if (`${response[0]}`.startsWith("error")) {
+            logger.error(response[0]);
+        }
+    } catch (error) {
+        logger.error(error);
+    }
+};
+
+const doRegisterProtocolHandle = async (email: string, tabId: number) => {
+    try {
+        const response = await browser.tabs.executeScript(tabId, {
+            code: atob(`${process.env.REACT_APP_REGISTERPROTOCOLHANDLER}`)
+                .replace(/"%email%"/g, JSON.stringify(email))
+                .replace(/"%token%"/g, JSON.stringify(backgroundStore.getState().settings.mailtoHandlerToken)),
+            runAt: "document_start",
+        });
+
+        if (`${response[0]}`.startsWith("error")) {
+            logger.error(response[0]);
+        }
+    } catch (error) {
+        logger.error(error);
+    }
+};
+
+export const openEmail = async (email: string, path: string = "/inbox",
+    registerProtocolHandle: boolean = false, composeData: any | undefined = undefined) => {
     const account = selectAccount(email);
     if (account === undefined) {
         logger.debug(`account not found. email: ${email}`);
@@ -28,6 +62,14 @@ export const openEmail = async (email: string, path: string = "/inbox") => {
         browser.windows.update(tab.windowId, {
             focused: true,
         })]);
+
+        if (registerProtocolHandle) {
+            doRegisterProtocolHandle(email, tab.id);
+        }
+
+        if (composeData !== undefined) {
+            doCompose(composeData, tab.id);
+        }
         return;
     }
 
@@ -56,5 +98,13 @@ export const openEmail = async (email: string, path: string = "/inbox") => {
 
     if (`${response[0]}`.startsWith("error")) {
         logger.error(response[0]);
+    }
+
+    if (registerProtocolHandle) {
+        doRegisterProtocolHandle(email, newTab.id as number);
+    }
+
+    if (composeData !== undefined) {
+        doCompose(composeData, newTab.id as number);
     }
 };

@@ -14,8 +14,7 @@ export const defaultPeekState: IPeekState = process.env.NODE_ENV === "developmen
                     protonId: "",
                     protonConvId: "",
                     date: Date.now() - 3600 * 1000 * 5 * n,
-                    subject: n === 0 ? "short subject" : `this is a ${
-                        [...Array(n).keys() as any].map(() => "very long").join(" ")} message (${n}) subject from the default peek state `,
+                    subject: n === 0 ? "short subject" : `this is a very long message (${n}) subject from the default peek state `,
                     from: `blah${n}@gmail.com`,
                     read: false,
                 };

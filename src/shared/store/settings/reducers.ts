@@ -1,6 +1,7 @@
 import { ActionType } from "typesafe-actions";
 import { ISettings, SET_SETTINGS, LOAD_SETTINGS } from "./types";
 import * as actions from "./actions";
+import cryptoRandomString from "crypto-random-string";
 
 export const defaultSettings: ISettings = {
     language: "en",
@@ -12,6 +13,7 @@ export const defaultSettings: ISettings = {
     multipleNotificationMessage: "",
     useLightIcon: false,
     darkTheme: false,
+    mailtoHandlerToken: cryptoRandomString({ length: 16, type: "url-safe" }),
 };
 
 const initialState: ISettings = defaultSettings;
