@@ -2,13 +2,13 @@
     try {
         const wait = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-        const refresh = document.querySelector("a.navigationItem-item[href$='/inbox']") ||
-            document.querySelector("a.navigation__link[href$='/inbox']");
+        const refresh = document.querySelector("a.navigationItem-item[href='/inbox']") ||
+            document.querySelector("a.navigation__link[href='/inbox']");
         if (refresh !== null) {
             refresh.click();
-            await wait(100);
+            await wait(200);
             refresh.click();
-            await wait(100);
+            await wait(200);
         }
 
         window.history.pushState({}, "", `${"%url%"}`);
