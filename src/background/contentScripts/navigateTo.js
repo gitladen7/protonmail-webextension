@@ -2,7 +2,8 @@
     try {
         const wait = async (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-        const refresh = document.querySelector(".refresh");
+        const refresh = document.querySelector("a.navigationItem-item[href$='/inbox']") ||
+            document.querySelector("a.navigation__link[href$='/inbox']");
         if (refresh !== null) {
             refresh.click();
         }
