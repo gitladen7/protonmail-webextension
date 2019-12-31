@@ -6,7 +6,7 @@ import { selectAccount } from "../helpers/selectors";
 import { _, loadLocale } from "../../shared/i18n";
 import { emailFetcherService } from "./emailFetcherService";
 
-const dispatchedNotificationsCount = 0;
+let dispatchedNotificationsCount = 0;
 
 interface IDispatchedNotification {
     id: string;
@@ -52,7 +52,7 @@ export class NotificationService {
     }
 
     async dispatchNotification(email: string, title: string, message: string, protonId: string, convId: string) {
-        const id = `proton-${dispatchedNotificationsCount}`;
+        const id = `proton-${++dispatchedNotificationsCount}`;
         this.dispatchedNotifications.unshift({
             id,
             email,
