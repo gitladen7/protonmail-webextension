@@ -56,6 +56,14 @@ export const openEmail = async (email: string, path: string = "/inbox",
             continue;
         }
 
+        if (path.indexOf("/inbox/") !== -1) {
+            await browser.tabs.executeScript(tab.id, {
+                // eslint-disable-next-line max-len
+                code: `window.history.pushState({}, "", ${JSON.stringify(path)});window.dispatchEvent(new PopStateEvent("popstate", {state: {}}));`,
+                runAt: "document_start",
+            });
+        }
+
         await Promise.all([browser.tabs.update(tab.id, {
             active: true,
         }),
@@ -69,13 +77,6 @@ export const openEmail = async (email: string, path: string = "/inbox",
 
         if (composeData !== undefined) {
             doCompose(composeData, tab.id);
-        }
-
-        if (path.indexOf("/inbox/") !== -1) {
-            await browser.tabs.executeScript(tab.id, {
-                code: `window.location.replace(${JSON.stringify(path)});`,
-                runAt: "document_start",
-            });
         }
         return;
     }
