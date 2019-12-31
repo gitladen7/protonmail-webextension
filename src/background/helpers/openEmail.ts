@@ -70,6 +70,13 @@ export const openEmail = async (email: string, path: string = "/inbox",
         if (composeData !== undefined) {
             doCompose(composeData, tab.id);
         }
+
+        if (path.indexOf("/inbox/") !== -1) {
+            await browser.tabs.executeScript(tab.id, {
+                code: `window.location.replace(${JSON.stringify(path)});`,
+                runAt: "document_start",
+            });
+        }
         return;
     }
 
