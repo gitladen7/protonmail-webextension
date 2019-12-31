@@ -5,7 +5,8 @@ const scripts = [
     "load",
     "autofill",
     "compose",
-    "registerProtocolHandler"
+    "registerProtocolHandler",
+    "navigateTo"
 ];
 
 const envList = scripts.map((name) => {

@@ -57,11 +57,15 @@ export const openEmail = async (email: string, path: string = "/inbox",
         }
 
         if (path.indexOf("/inbox/") !== -1) {
-            await browser.tabs.executeScript(tab.id, {
-                // eslint-disable-next-line max-len
-                code: `window.history.pushState({}, "", ${JSON.stringify(path)});window.dispatchEvent(new PopStateEvent("popstate", {state: {}}));`,
-                runAt: "document_start",
-            });
+            try {
+                await browser.tabs.executeScript(tab.id, {
+                    code: atob(`${process.env.REACT_APP_NAVIGATETO}`)
+                        .replace(/"%url%"/g, JSON.stringify(path)),
+                    runAt: "document_start",
+                });
+            } catch (error) {
+                logger.error(error);
+            }
         }
 
         await Promise.all([browser.tabs.update(tab.id, {
