@@ -2,6 +2,7 @@
 
 ## Download
 - Firefox: [ProtonMail (unofficial) on Firefox Addons](https://addons.mozilla.org/en-US/firefox/addon/protonmail/)
+- Microsoft Edge: [ProtonMail (unofficial) on Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/iemeabfnjpcnlajlflkdkcapdfadhpbp)
 - Chromium based browsers: [ProtonMail (unofficial) on Chrome Web Store](https://chrome.google.com/webstore/detail/protonmail-unofficial/jfiaocmgamojjagpllpljapgekgmkaje)
 - Opera: [ProtonMail (unofficial) on Opera addons](https://addons.opera.com/en/extensions/details/protonmail-unofficial/)
 
