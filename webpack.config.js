@@ -6,7 +6,11 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const env = {};
 const vars = fs.readFileSync("./.env").toString().split("\n");
 for (const envVar of vars) {
-    env[envVar.replace(/=.*$/g, "")] = envVar.replace(/^[^=]*=/g, "");
+    let val = envVar.replace(/^[^=]*=/g, "");
+    if (val.indexOf("base64:") === 0) {
+        val = Buffer.from(val.replace(/base64:/, ""), "base64").toString();
+    }
+    env[envVar.replace(/=.*$/g, "")] = val;
 }
 
 module.exports = (webpackEnv) => {

@@ -7,7 +7,7 @@ import { backgroundStore } from "../backgroundStore";
 const doCompose = async (composeData: any, tabId: number) => {
     try {
         const response = await browser.tabs.executeScript(tabId, {
-            code: atob(`${process.env.REACT_APP_COMPOSE}`).replace(/"%obj%"/g, JSON.stringify(composeData)),
+            code: (`${process.env.REACT_APP_COMPOSE}`).replace(/"%obj%"/g, JSON.stringify(composeData)),
             runAt: "document_start",
         });
 
@@ -22,7 +22,7 @@ const doCompose = async (composeData: any, tabId: number) => {
 const doRegisterProtocolHandle = async (email: string, tabId: number) => {
     try {
         const response = await browser.tabs.executeScript(tabId, {
-            code: atob(`${process.env.REACT_APP_REGISTERPROTOCOLHANDLER}`)
+            code: (`${process.env.REACT_APP_REGISTERPROTOCOLHANDLER}`)
                 .replace(/"%email%"/g, JSON.stringify(email))
                 .replace(/"%token%"/g, JSON.stringify(backgroundStore.getState().settings.mailtoHandlerToken)),
             runAt: "document_start",
@@ -59,7 +59,7 @@ export const openEmail = async (email: string, path: string = "/inbox",
         if (path.indexOf("/inbox/") !== -1) {
             try {
                 await browser.tabs.executeScript(tab.id, {
-                    code: atob(`${process.env.REACT_APP_NAVIGATETO}`)
+                    code: (`${process.env.REACT_APP_NAVIGATETO}`)
                         .replace(/"%url%"/g, JSON.stringify(path)),
                     runAt: "document_start",
                 });
@@ -104,7 +104,7 @@ export const openEmail = async (email: string, path: string = "/inbox",
 
     logger.debug("executing script in tab...");
     const response = await browser.tabs.executeScript(newTab.id, {
-        code: atob(`${process.env.REACT_APP_LOAD}`).replace(/"%obj%"/g, JSON.stringify(session.sharedSessionObject || {})),
+        code: (`${process.env.REACT_APP_LOAD}`).replace(/"%obj%"/g, JSON.stringify(session.sharedSessionObject || {})),
         runAt: "document_start",
     });
 

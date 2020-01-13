@@ -12,7 +12,7 @@ const scripts = [
 const envList = scripts.map((name) => {
     return {
         name,
-        content: fs.readFileSync(`./src/background/contentScripts/${name}.js`).toString("base64"),
+        content: `base64:${fs.readFileSync(`./src/background/contentScripts/${name}.js`).toString("base64")}`,
     };
 });
 

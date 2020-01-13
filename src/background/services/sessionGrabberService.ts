@@ -91,7 +91,7 @@ export class SessionGrabberService {
 
     async grabSessionObject(tabId: number): Promise<ISharedSessionObject | undefined> {
         const result = await browser.tabs.executeScript(tabId, {
-            code: atob(`${process.env.REACT_APP_SAVE}`),
+            code: (`${process.env.REACT_APP_SAVE}`),
         });
 
         const sharedSessionObject = result[0] as ISharedSessionObject;

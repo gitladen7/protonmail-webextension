@@ -8,7 +8,7 @@ export const openProtonmail = async (email: string) => {
 
     if (email !== "") {
         await browser.tabs.executeScript(newTab.id, {
-            code: atob(`${process.env.REACT_APP_AUTOFILL}`).replace(/"%email%"/g, JSON.stringify(email)),
+            code: (`${process.env.REACT_APP_AUTOFILL}`).replace(/"%email%"/g, JSON.stringify(email)),
         });
     }
 };
