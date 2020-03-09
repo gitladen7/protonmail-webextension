@@ -1,6 +1,8 @@
 (() => {
     try {
         window.dispatchEvent(new Event("unload"));
+        window.dispatchEvent(new Event("pagehide"));
+
         const windowName = window.name;
         window.name = "";
         const wno = JSON.parse(windowName);
