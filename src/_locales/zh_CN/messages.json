@@ -1,0 +1,226 @@
+{
+    "extension_name": {
+        "message": "ProtonMail（非官方）",
+        "description": "Name of the extension."
+    },
+    "extension_description": {
+        "message": "非官方的 ProtonMail 扩展。可以让 ProtonMail 关闭时不会登出帐号，并提供其邮件通知。",
+        "description": "Description of the extension. Max 132 characters."
+    },
+    "button_goBack": {
+        "message": "返回"
+    },
+    "tooltip_peek": {
+        "message": "摘要"
+    },
+    "warning_incognito": {
+        "message": "你已经在隐私浏览标签页中打开了 ProtonMail。扩展将不会检测那个会话。"
+    },
+    "warning_container": {
+        "message": "你已经在容器标签页中打开了 ProtonMail。扩展将不会检测那个会话。"
+    },
+    "accounts_title": {
+        "message": "ProtonMail 帐号列表"
+    },
+    "accounts_tooltip_settings": {
+        "message": "打开设置"
+    },
+    "accounts_tooltip_help": {
+        "message": "打开帮助页面"
+    },
+    "accounts_tooltip_sync": {
+        "message": "提取新邮件"
+    },
+    "accounts_tooltip_account_settings": {
+        "message": "打开帐户设置"
+    },
+    "accounts_noAccounts": {
+        "message": "打开 ProtonMail 网站，然后转到该标签页添加你的帐户。"
+    },
+    "accounts_hidden_checkbox": {
+        "message": "隐藏显示"
+    },
+    "settings_title": {
+        "message": "设置"
+    },
+    "settings_language_label": {
+        "message": "语言"
+    },
+    "settings_fetchinterval_label": {
+        "message": "邮件检查间隔"
+    },
+    "settings_fetchinterval_option_singular": {
+        "message": "每分钟检查一次邮件"
+    },
+    "settings_fetchinterval_option": {
+        "message": "每 $1 分钟检查一次邮件"
+    },
+    "settings_notifications_label": {
+        "message": "通知设置"
+    },
+    "settings_notifications_button": {
+        "message": "展开通知设置"
+    },
+    "settings_notifications_placeholder": {
+        "message": "默认留空"
+    },
+    "settings_notifications_single_title": {
+        "message": "单封邮件通知标题"
+    },
+    "settings_notifications_single_message": {
+        "message": "单封邮件通知消息"
+    },
+    "settings_notifications_multiple_title": {
+        "message": "多封邮件通知标题"
+    },
+    "settings_notifications_multiple_message": {
+        "message": "多封邮件通知消息"
+    },
+    "settings_darkTheme_preLabel": {
+        "message": "暗色主题"
+    },
+    "settings_darkTheme_label": {
+        "message": "使用暗色主题"
+    },
+    "settings_icon_preLabel": {
+        "message": "图标"
+    },
+    "settings_icon_label": {
+        "message": "使用亮色图标"
+    },
+    "settings_domain_label": {
+        "message": "首选 ProtonMail 域名"
+    },
+    "settings_version_label": {
+        "message": "版本"
+    },
+    "tooltip_autofill": {
+        "message": "在 ProtonMail 中自动填充用户名"
+    },
+    "tooltip_open": {
+        "message": "在 ProtonMail 中打开"
+    },
+    "badge_expired": {
+        "message": "会话已过期"
+    },
+    "button_pmOpen": {
+        "message": "打开 ProtonMail"
+    },
+    "accountSettings_title": {
+        "message": "$1 的设置"
+    },
+    "accountSettings_persistWarning": {
+        "message": "警告：启用此设置将会保存你的 $1 邮箱密码到硬盘中。在公共计算机上不要使用此设置。还要继续吗？"
+    },
+    "accountSettings_acceptWarning": {
+        "message": "仍然启用"
+    },
+    "accountSettings_persist_label": {
+        "message": "保持会话"
+    },
+    "accountSettings_persistToDisk_label": {
+        "message": "即使浏览器关闭也保持会话"
+    },
+    "accountSettings_badge_label": {
+        "message": "显示未读邮件数标记"
+    },
+    "accountSettings_notifications_label": {
+        "message": "显示新邮件通知"
+    },
+    "accountSettings_peeking_label": {
+        "message": "启用摘要"
+    },
+    "accountSettings_hide_label": {
+        "message": "隐藏"
+    },
+    "accountSettings_expired_title": {
+        "message": "会话已过期"
+    },
+    "accountSettings_expired_body": {
+        "message": "你的会话已过期。"
+    },
+    "accountSettings_button_clear": {
+        "message": "清除会话"
+    },
+    "accountSettings_button_delete": {
+        "message": "删除"
+    },
+    "accountSettings_set_as_handler": {
+        "message": "注册为 mailto: 协议处理程序"
+    },
+    "peeking_receivedFrom": {
+        "message": "发件人："
+    },
+    "peeking_markAsRead": {
+        "message": "标为已读"
+    },
+    "peeking_open": {
+        "message": "在 ProtonMail 中阅读"
+    },
+    "peeking_refresh": {
+        "message": "刷新"
+    },
+    "peeking_markAllAsRead": {
+        "message": "全部标为已读"
+    },
+    "peeking_loading": {
+        "message": "正在载入……"
+    },
+    "peeking_error": {
+        "message": "错误："
+    },
+    "peeking_noMessages": {
+        "message": "没有未读消息。"
+    },
+    "peeking_moreMessages_button": {
+        "message": "另外 $1 条消息"
+    },
+    "notification_single_title": {
+        "message": "收到来自 %senderAddress% 的新邮件"
+    },
+    "notification_single_message": {
+        "message": "%subject%"
+    },
+    "notification_multiple_title": {
+        "message": "%email% 收到 %count% 封新邮件"
+    },
+    "notification_multiple_message": {
+        "message": "%email% 邮箱收到了 %count% 封新邮件"
+    },
+    "ago_now": {
+        "message": "刚刚"
+    },
+    "ago_minute": {
+        "message": "一分钟前"
+    },
+    "ago_minutes": {
+        "message": "$1 分钟前"
+    },
+    "ago_hour": {
+        "message": "一小时前"
+    },
+    "ago_hours": {
+        "message": "$1 小时前"
+    },
+    "ago_day": {
+        "message": "昨天"
+    },
+    "ago_days": {
+        "message": "$1 天前"
+    },
+    "ago_month": {
+        "message": "一个月前"
+    },
+    "ago_months": {
+        "message": "$1 个月前"
+    },
+    "ago_year": {
+        "message": "一年前"
+    },
+    "ago_years": {
+        "message": "$1 年前"
+    },
+    "notification_markAsRead": {
+        "message": "标为已读"
+    }
+}
