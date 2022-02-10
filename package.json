@@ -20,7 +20,7 @@
     "eslint-plugin-react": "^7.16.0",
     "glob": "^7.1.4",
     "jszip": "^3.2.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "proton-api": "^1.0.5",
     "purgecss": "^1.4.0",
     "randombytes": "^2.1.0",
