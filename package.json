@@ -20,7 +20,6 @@
     "eslint-plugin-react": "^7.16.0",
     "glob": "^7.1.4",
     "jszip": "^3.2.2",
-    "node-sass": "^4.12.0",
     "proton-api": "^1.0.5",
     "purgecss": "^1.4.0",
     "randombytes": "^2.1.0",
@@ -30,6 +29,7 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
     "rimraf": "^3.0.0",
+    "sass": "^1.53.0",
     "ts-loader": "^6.2.0",
     "typesafe-actions": "^4.4.2",
     "typescript": "3.6.4",
@@ -65,6 +65,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {}
+  }
 }
