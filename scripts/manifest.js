@@ -34,7 +34,7 @@ function generateManifest() {
     ];
 
     const manifest = {
-        "manifest_version": 2,
+        "manifest_version": 3,
         "name": "__MSG_extension_name__",
         "version": JSON.parse(fs.readFileSync("./package.json").toString()).version,
         "description": "__MSG_extension_description__",
