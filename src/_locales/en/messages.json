@@ -1,10 +1,10 @@
 {
     "extension_name": {
-        "message": "ProtonMail (unofficial)",
+        "message": "ProtonMail (forked gitladen7,unofficial)",
         "description": "Name of the extension."
     },
     "extension_description": {
-        "message": "Unofficial ProtonMail extension. Provides notifications and makes it possible to close ProtonMail without getting logged out.",
+        "message": "Unofficial ProtonMail extension. Forked from gitladen7/protonmail-webextension.",
         "description": "Description of the extension. Max 132 characters."
     },
     "button_goBack": {
