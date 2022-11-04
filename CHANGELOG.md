@@ -1,3 +1,2 @@
-### 1.8.0 - Released on 30/12/2019
-- Added mailto: link handler.
-- Added help button.
+### 1.20.0 - Released on 04/11/2022
+- updated to new domain
