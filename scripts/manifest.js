@@ -24,6 +24,7 @@ function generateManifest() {
     const csp = `default-src 'self'; connect-src ${urls.join(" ")}`;
 
     const permissions = [
+        ...protonDomains.map((d) => `https://${d}/*`),
         ...["tabs",
             "storage",
             "cookies",
@@ -31,13 +32,9 @@ function generateManifest() {
             "webRequest",
             "alarms"],
     ];
-    
-    const host_permissions = [
-        ...protonDomains.map((d) => `https://${d}/*`),
-    ];
 
     const manifest = {
-        "manifest_version": 3,
+        "manifest_version": 2,
         "name": "__MSG_extension_name__",
         "version": JSON.parse(fs.readFileSync("./package.json").toString()).version,
         "description": "__MSG_extension_description__",
@@ -49,8 +46,7 @@ function generateManifest() {
             "96": "icons/icon.svg",
         },
         "permissions": permissions,
-        "host_permissions": host_permissions,
-        "action": {
+        "browser_action": {
             "browser_style": false,
             "default_popup": "index.html",
             "default_icon": "icons/icon.svg",
@@ -64,11 +60,12 @@ function generateManifest() {
             ],
         },
         "background": {
-            "service_worker": "background.js",
+            "scripts": [
+                "browser-polyfill.js",
+                "background.js",
+            ],
         },
-        "content_security_policy": {
-            "extension_pages": csp,
-        },
+        "content_security_policy": csp,
     };
 
 
@@ -79,8 +76,8 @@ function generateManifest() {
             "64": "icons/icon-64.png",
             "128": "icons/icon-128.png",
         };
-        manifest.action.theme_icons = undefined;
-        manifest.action.default_icon = {
+        manifest.browser_action.theme_icons = undefined;
+        manifest.browser_action.default_icon = {
             "16": "icons/icon-16.png",
             "32": "icons/icon-32.png",
         };
