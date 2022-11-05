@@ -24,7 +24,6 @@ function generateManifest() {
     const csp = `default-src 'self'; connect-src ${urls.join(" ")}`;
 
     const permissions = [
-        ...protonDomains.map((d) => `https://${d}/*`),
         ...["tabs",
             "storage",
             "cookies",
@@ -65,12 +64,11 @@ function generateManifest() {
             ],
         },
         "background": {
-            "scripts": [
-                "browser-polyfill.js",
-                "background.js",
-            ],
+            "service_worker": @background.js",
         },
-        "content_security_policy": csp,
+        "content_security_policy": {
+            "extension_pages": csp,
+        },
     };
 
 
