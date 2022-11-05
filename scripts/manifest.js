@@ -32,6 +32,10 @@ function generateManifest() {
             "webRequest",
             "alarms"],
     ];
+    
+    const host_permissions = [
+        ...protonDomains.map((d) => `https://${d}/*`),
+    ];
 
     const manifest = {
         "manifest_version": 3,
@@ -46,6 +50,7 @@ function generateManifest() {
             "96": "icons/icon.svg",
         },
         "permissions": permissions,
+        "host_permissions": host_permissions,
         "action": {
             "browser_style": false,
             "default_popup": "index.html",
