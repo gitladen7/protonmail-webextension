@@ -64,7 +64,7 @@ function generateManifest() {
             ],
         },
         "background": {
-            "service_worker": @background.js",
+            "service_worker": "background.js",
         },
         "content_security_policy": {
             "extension_pages": csp,
