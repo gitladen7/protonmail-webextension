@@ -5,7 +5,7 @@ import randomBytes from "randombytes";
 
 export const defaultSettings: ISettings = {
     language: "en",
-    preferredDomain: "mail.protonmail.com",
+    preferredDomain: "mail.proton.me",
     fetchInterval: 1 * 60,
     singleNotificationTitle: "",
     singleNotificationMessage: "",
