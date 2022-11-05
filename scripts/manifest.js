@@ -46,7 +46,7 @@ function generateManifest() {
             "96": "icons/icon.svg",
         },
         "permissions": permissions,
-        "browser_action": {
+        "action": {
             "browser_style": false,
             "default_popup": "index.html",
             "default_icon": "icons/icon.svg",
@@ -76,8 +76,8 @@ function generateManifest() {
             "64": "icons/icon-64.png",
             "128": "icons/icon-128.png",
         };
-        manifest.browser_action.theme_icons = undefined;
-        manifest.browser_action.default_icon = {
+        manifest.action.theme_icons = undefined;
+        manifest.action.default_icon = {
             "16": "icons/icon-16.png",
             "32": "icons/icon-32.png",
         };
