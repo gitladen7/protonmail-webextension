@@ -36,7 +36,7 @@ const initialState: IProtonAccount[] = process.env.NODE_ENV !== "development" ? 
             unreadCount: n,
             sessions: n % 3 === 0 ? [
                 {
-                    domain: "mail.protonmail.com",
+                    domain: "mail.proton.me",
                     email: `email${n}@protonmail.com`,
                     uid: "uid",
                     sharedSessionObject: {
