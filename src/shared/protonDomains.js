@@ -1,6 +1,6 @@
 module.exports = {
     protonDomains: [
         "mail.proton.me",
-        "protonirockerxow.onion",
+        "protonmailrmez3lotccipshtkleegetolb73fuirgj7r4o4vfu7ozyd.onion",
     ],
 };
