@@ -1,7 +1,7 @@
 # Protonmail Unofficial Webextension
 
 ## Download
-No Download available as of yet, please build your own...
+Please build your own or if you insist, you can download the compiled zips from the root folder.
 Current plugins available as extensions are now working because the ProtonMail changed the domain.
 
 ## Building
