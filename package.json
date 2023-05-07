@@ -19,7 +19,7 @@
     "cross-env": "^6.0.3",
     "eslint-plugin-react": "^7.16.0",
     "glob": "^7.1.4",
-    "jszip": "^3.2.2",
+    "jszip": "^3.8.0",
     "node-sass": "^4.12.0",
     "proton-api": "^1.0.5",
     "purgecss": "^1.4.0",
